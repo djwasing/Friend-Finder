@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Page</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <span class="fa fa-fire"></span>Friend Finder Survey</h1>
+            <hr>
+            <h2 class="text-center">Rate how much you agree with the statments below with 5 being the most and 1 being
+                the least.</h2>
+            <br>
+            <div class="text-center">
+                <a href="/">
+                    <button class="btn btn-lg btn-default">
+                        <span class="fa fa-home"></span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Survey Page -->
+                <div class="card">
+                    <div class="card-header">
+                        Survey
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="survey-name">Name</label>
+                                <input type="text" class="form-control" id="survey-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="survey-photo">Photo Link</label>
+                                <input type="text" class="form-control" id="survey-photo">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question1">I consider myself an
+                                        early-bird.</label>
+                                </div>
+                                <select class="custom-select" id="question1">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question2">I would rather cook dinner than go
+                                        out to eat.</label>
+                                </div>
+                                <select class="custom-select" id="question2">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+    
+
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+        var newFriend = {
+            name: $("#survey-name").val(),
+            photo: $("#survey-photo").val(),
+            scores: [
+                $("#question1").val(),
+                $("#question2").val()
+            ]
+        }
+        //console.log(newUser);
+    
+
+    $.post("/api/friends", newFriend,
+        function (data) {
+            console.log(data);
+        });
+
+    });
+    
+
+</script>
