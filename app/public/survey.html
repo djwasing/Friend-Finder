@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
@@ -44,11 +44,11 @@
                         <form role="form">
                             <div class="form-group">
                                 <label for="survey-name">Name</label>
-                                <input type="text" class="form-control" id="survey-name">
+                                <input type="text" class="form-control" id="survey-name" placeholder="Your name here">
                             </div>
                             <div class="form-group">
                                 <label for="survey-photo">Photo Link</label>
-                                <input type="text" class="form-control" id="survey-photo">
+                                <input type="text" class="form-control" id="survey-photo" placeholder="Photo link here">
                             </div>
 
                             <div class="input-group mb-3">
@@ -183,19 +183,40 @@
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
+                        <button type="submit" class="btn btn-primary submit" data-target="#modal" data-toggle="modal">Submit</button>
+                        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">Your Best Friend</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="false">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3 id="matchName"></h3>
+                                        <img id="matchPhoto" width="350px"/>
+                                    </div>                                        
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+
 </body>
 
 </html>
 
-<
+
 <script type="text/javascript">
 
     $(".submit").on("click", function (event) {
@@ -221,6 +242,8 @@
         $.post("/api/friends", newFriend,
             function (data) {
                 console.log("from the survey" + data);
+                $("#matchName").text(data.name);
+                $("#matchPhoto").attr("src", data.photo);
         });
 
     });

@@ -1,5 +1,5 @@
 var friendsArray = require("../data/friends");
-//console.log("this is friends array from back: " + friendsArray);
+
 
 module.exports = function (app) {
 
@@ -12,7 +12,6 @@ module.exports = function (app) {
         let lowestDiff = 41;
         
         for (let i = 0; i < friendsArray.length; i++) {
-            //console.log("friendsArr[i]: " + friendsArray[i]);
             let diffArr = [];
 
             for (let j = 0; j < 10; j++) {
@@ -22,7 +21,7 @@ module.exports = function (app) {
                 if (j === 9) {
                     //adds the values in each arr together to get currentDiff 
                     let currentDiff = diffArr.reduce((acc, val) => acc + val); 
-                    //console.log("current diff: " + currentDiff);
+                    
                     if (currentDiff < lowestDiff) {
                         lowestDiff = currentDiff;
                         lowestIndex = i;
@@ -37,12 +36,8 @@ module.exports = function (app) {
                 console.log("lowestName: " + friendsArray[lowestIndex].name);
                 res.json(friendsArray[lowestIndex]);
             }; 
-            //console.log("diffArr: " + diffArr);
-            
         };
         friendsArray.push(req.body);
-        
-            //console.log("total difference: " + totalDiff);
     });
         
 }

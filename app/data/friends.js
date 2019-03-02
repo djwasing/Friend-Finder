@@ -1,7 +1,7 @@
 var friendsArray = [
     {
         "name":"Kelly",
-        "photo":"#",
+        "photo":"https://media.giphy.com/media/VS1OZuOgiuR68/giphy.gif",
         "scores":[
             5,
             1,
@@ -16,7 +16,7 @@ var friendsArray = [
         ]
     }, {
         "name":"Michael",
-        "photo":"#",
+        "photo":"https://media.giphy.com/media/xMGh0bajSyNdC/source.gif",
         "scores":[
             1,
             2,
@@ -31,7 +31,7 @@ var friendsArray = [
         ]
     }, {
         "name":"Pam",
-        "photo":"#",
+        "photo":"https://media.giphy.com/media/1o1lMxNvndIGIp5Qk5/source.gif",
         "scores":[
             1,
             5,
