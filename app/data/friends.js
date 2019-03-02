@@ -1,6 +1,6 @@
 var friendsArray = [
     {
-        "name":"Borat",
+        "name":"Kelly",
         "photo":"#",
         "scores":[
             5,
@@ -15,14 +15,14 @@ var friendsArray = [
             4
         ]
     }, {
-        "name":"Tom",
+        "name":"Michael",
         "photo":"#",
         "scores":[
-            5,
+            1,
             2,
-            5,
+            1,
             3,
-            5, 
+            1, 
             1, 
             3, 
             2, 
@@ -30,7 +30,7 @@ var friendsArray = [
             1
         ]
     }, {
-        "name":"Ricky",
+        "name":"Pam",
         "photo":"#",
         "scores":[
             1,

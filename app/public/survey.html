@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -19,10 +19,11 @@
 
         <div class="jumbotron">
             <h1 class="text-center">
-                <span class="fa fa-fire"></span>Friend Finder Survey</h1>
+                <i class="fas fa-user-friends"></i>...<i class="fas fa-arrow-right"></i>...Friend Finder Survey...<i class="fas fa-arrow-left"></i>...<i class="fas fa-user-friends"></i>
+            </h1>
             <hr>
-            <h2 class="text-center">Rate how much you agree with the statments below with 5 being the most and 1 being
-                the least.</h2>
+            <h4 class="text-center">Rate how much you agree with the statments below with 5 being the most and 1 being
+                the least.</h4>
             <br>
             <div class="text-center">
                 <a href="/">
@@ -78,6 +79,110 @@
                                 </select>
                             </div>
 
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question3">I would rather go camping than go on a caribbean cruise.</label>
+                                </div>
+                                <select class="custom-select" id="question3">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question4">I would like to sky-dive someday.</label>
+                                </div>
+                                <select class="custom-select" id="question4">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question5">I am afraid to dance in public.</label>
+                                </div>
+                                <select class="custom-select" id="question5">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question6">I am the life of the party at social gatherings.</label>
+                                </div>
+                                <select class="custom-select" id="question6">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question7">I always wear my seatbelt everytime I'm in a moving car.</label>
+                                </div>
+                                <select class="custom-select" id="question7">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question8">I feel anxious if my home is unorganized.</label>
+                                </div>
+                                <select class="custom-select" id="question8">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question9">I would rather spend time with someone special than receive a material gift from them.</label>
+                                </div>
+                                <select class="custom-select" id="question9">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="question10">I am active and exercise is important to me.</label>
+                                </div>
+                                <select class="custom-select" id="question10">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
                             <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
                     </div>
@@ -90,13 +195,8 @@
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<
 <script type="text/javascript">
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-    
 
     $(".submit").on("click", function (event) {
         event.preventDefault();
@@ -104,16 +204,23 @@
             name: $("#survey-name").val(),
             photo: $("#survey-photo").val(),
             scores: [
-                $("#question1").val(),
-                $("#question2").val()
+                parseInt($("#question1").val()),
+                parseInt($("#question2").val()),
+                parseInt($("#question3").val()),
+                parseInt($("#question4").val()),
+                parseInt($("#question5").val()),
+                parseInt($("#question6").val()),
+                parseInt($("#question7").val()),
+                parseInt($("#question8").val()),
+                parseInt($("#question9").val()),
+                parseInt($("#question10").val())
             ]
         }
         //console.log(newUser);
-    
 
-    $.post("/api/friends", newFriend,
-        function (data) {
-            console.log(data);
+        $.post("/api/friends", newFriend,
+            function (data) {
+                console.log("from the survey" + data);
         });
 
     });
