@@ -37,7 +37,7 @@ module.exports = function (app) {
                 res.json(friendsArray[lowestIndex]);
             }; 
         };
-        //friendsArray.push(req.body);
+        friendsArray.push(req.body);
     });
         
 }
